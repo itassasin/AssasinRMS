@@ -1,0 +1,27 @@
+﻿<Window x:Class="server.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:server"
+        mc:Ignorable="d"
+        Title="AssasinRMS" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem x:Name="Computers_tab" Header="Компьютеры" Margin="0">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox x:Name="Computers_list" Margin="0">
+                        <ComboBoxItem Height="18" Background="#FFEAEAEA" Padding="4">
+                            <ComboBoxItem.ContextMenu>
+                                <ContextMenu/>
+                            </ComboBoxItem.ContextMenu>
+                        </ComboBoxItem>
+                    </ListBox>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Settings_tab" Header="Настройки" Margin="0">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
