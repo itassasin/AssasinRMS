@@ -17,12 +17,21 @@
                 <TabItem.ContextMenu>
                     <ContextMenu/>
                 </TabItem.ContextMenu>
-                <Grid Background="#FFE5E5E5">
+                <Grid Background="#FF074C6A">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45*"/>
+                        <RowDefinition Height="332*"/>
+                    </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="150*"/>
-                        <ColumnDefinition Width="643*"/>
+                        <ColumnDefinition Width="250*"/>
+                        <ColumnDefinition Width="150*"/>
+                        <ColumnDefinition Width="250*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="IP адрес" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <Label Content="IP адрес" Margin="10" Foreground="White" FontSize="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Padding="0" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
+                    <TextBox Margin="20,15,20,0" TextWrapping="Wrap" Text="127.0.0.1" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="16" TextAlignment="Center" VerticalAlignment="Top"/>
+                    <Label Content="Порт" Margin="10" Foreground="White" FontSize="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Padding="0" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="2"/>
+                    <TextBox Margin="20,15,10,0" TextWrapping="Wrap" Text="8888" Grid.Column="3" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="16" TextAlignment="Center" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
         </TabControl>
