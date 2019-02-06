@@ -8,12 +8,12 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FF0092D6">
         <TabControl Background="#FF79B9DE">
-            <TabItem x:Name="Computers_tab" Header="TabItem" Background="#FF2C3C5F">
+            <TabItem x:Name="Computers_tab" Header="Клиенты" Background="#00000000" FontSize="14">
                 <Grid Background="#FF074C6A">
                     <ListBox Style="{DynamicResource ListBoxStyle1}" BorderBrush="#FF00DCFF" Margin="10" Background="{x:Null}"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="Settings_tab" Header="TabItem">
+            <TabItem x:Name="Settings_tab" Header="Настройки" Background="#00000000" FontSize="14">
                 <TabItem.ContextMenu>
                     <ContextMenu/>
                 </TabItem.ContextMenu>

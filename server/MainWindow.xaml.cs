@@ -20,6 +20,17 @@ namespace server
     /// </summary>
     public partial class MainWindow : Window
     {
+        class Server
+        {
+            public Server(string ip, string port)
+            {
+
+            }
+            void UsersAdd()
+            {
+                
+            }
+        }
         public MainWindow()
         {
             InitializeComponent();
