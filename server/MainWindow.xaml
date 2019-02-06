@@ -5,23 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:server"
         mc:Ignorable="d"
-        Title="AssasinRMS" Height="450" Width="800">
-    <Grid>
-        <TabControl>
-            <TabItem x:Name="Computers_tab" Header="Компьютеры" Margin="0">
-                <Grid Background="#FFE5E5E5">
-                    <ListBox x:Name="Computers_list" Margin="0">
-                        <ComboBoxItem Height="18" Background="#FFEAEAEA" Padding="4">
-                            <ComboBoxItem.ContextMenu>
-                                <ContextMenu/>
-                            </ComboBoxItem.ContextMenu>
-                        </ComboBoxItem>
-                    </ListBox>
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF0092D6">
+        <TabControl Background="#FF79B9DE">
+            <TabItem x:Name="Computers_tab" Header="TabItem" Background="#FF2C3C5F">
+                <Grid Background="#FF074C6A">
+                    <ListBox Style="{DynamicResource ListBoxStyle1}" BorderBrush="#FF00DCFF" Margin="10" Background="{x:Null}"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="Settings_tab" Header="Настройки" Margin="0">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem x:Name="Settings_tab" Header="TabItem">
+                <TabItem.ContextMenu>
+                    <ContextMenu/>
+                </TabItem.ContextMenu>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150*"/>
+                        <ColumnDefinition Width="643*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="IP адрес" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                </Grid>
             </TabItem>
         </TabControl>
+
     </Grid>
 </Window>
