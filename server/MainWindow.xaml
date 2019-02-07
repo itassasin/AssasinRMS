@@ -6,43 +6,44 @@
         xmlns:local="clr-namespace:server"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FF0092D6">
-        <TabControl Background="#FF79B9DE">
-            <TabItem x:Name="Computers_tab" Header="Клиенты" Background="#00000000" FontSize="14">
-                <Grid Background="#FF074C6A">
-                    <ListBox Style="{DynamicResource ListBoxStyle1}" BorderBrush="#FF00DCFF" Margin="10" Background="{x:Null}"/>
-                </Grid>
-            </TabItem>
-            <TabItem x:Name="Settings_tab" Header="Настройки" Background="#00000000" FontSize="14">
-                <TabItem.ContextMenu>
-                    <ContextMenu/>
-                </TabItem.ContextMenu>
-                <Grid Background="#FF074C6A" Margin="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="53*"/>
-                        <RowDefinition Height="53*"/>
-                        <RowDefinition Height="53*"/>
-                        <RowDefinition Height="53*"/>
-                        <RowDefinition Height="106*"/>
-                        <RowDefinition Height="40*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100*"/>
-                        <ColumnDefinition Width="216*"/>
-                        <ColumnDefinition Width="141*"/>
-                        <ColumnDefinition Width="90*"/>
-                        <ColumnDefinition Width="239*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label Content="IP адрес:" Margin="10,11.528" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Padding="0" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="30"/>
-                    <TextBox x:Name="Ip" Margin="10,15.028" TextWrapping="Wrap" Text="127.0.0.1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="16" TextAlignment="Center" Grid.Column="1" Height="23" TabIndex="0"/>
-                    <Label Content="Порт:" Margin="10,11.529,10,11.528" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Padding="0" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="1" Height="30"/>
-                    <TextBox x:Name="Port" Margin="10,15.529,0,14.528" TextWrapping="Wrap" Text="8888" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="16" TextAlignment="Center" Grid.Row="1" Grid.Column="1" Height="23" Width="50" HorizontalAlignment="Left" TabIndex="1"/>
-                    <Button x:Name="Start" Content="Сохранить" Grid.Column="4" Margin="10" Grid.Row="5" Background="#FF0A162C" Foreground="White" BorderBrush="#FFFFE5E5" Click="ServerStart"/>
-                    <PasswordBox x:Name="Pass" Grid.Column="4" Margin="10,16.528" Height="20" TabIndex="2"/>
-                    <Label Content="Пароль:" Margin="10,11.528" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Padding="0" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Height="30"/>
-                </Grid>
-            </TabItem>
-        </TabControl>
+  <Grid Background="#FF0092D6">
+    <TabControl Background="#FF79B9DE">
+      <TabItem x:Name="Computers_tab" Header="Клиенты" Background="#00000000" FontSize="14">
+        <Grid Background="#FF074C6A">
+          <ListBox Style="{DynamicResource ListBoxStyle1}" BorderBrush="#FF00DCFF" Margin="10" Background="{x:Null}"/>
+        </Grid>
+      </TabItem>
+      <TabItem x:Name="Settings_tab" Header="Настройки" Background="#00000000" FontSize="14">
+        <TabItem.ContextMenu>
+          <ContextMenu/>
+        </TabItem.ContextMenu>
+        <Grid Background="#FF074C6A" Margin="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="45*"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="216*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="239*"/>
+          </Grid.ColumnDefinitions>
+          <Label Content="IP адрес:" Margin="10,11.528,10,9.472" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Padding="0" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
+          <TextBox x:Name="Ip" Margin="10,14" TextWrapping="Wrap" Text="127.0.0.1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="16" TextAlignment="Center" Grid.Column="1" TabIndex="0" VerticalAlignment="Top"/>
+          <Label Content="Порт:" Margin="10" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Padding="0" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="1"/>
+          <TextBox x:Name="Port" Margin="10,10,0,10" TextWrapping="Wrap" Text="8888" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="16" TextAlignment="Center" Grid.Row="1" Grid.Column="1" Width="50" TabIndex="1" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+          <Button x:Name="Start" Content="Сохранить" Grid.Column="4" Margin="10" Grid.Row="5" Background="#FF0A162C" Foreground="White" BorderBrush="#FFFFE5E5" Click="ServerStart"/>
+          <PasswordBox x:Name="Pass" Grid.Column="4" Margin="10,17,10,14" TabIndex="2" VerticalAlignment="Top"/>
+          <Label Content="Пароль:" Margin="10,11.528,10,9.472" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Padding="0" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3"/>
+          <CheckBox x:Name="checkBox1" Content="Запускать сервер при запуске программы" HorizontalAlignment="Left" Margin="10,14,0,0" Grid.Row="2" VerticalAlignment="Top" Width="333" Height="24" Grid.ColumnSpan="3" Background="White" Foreground="#FF3AFF00" FontSize="16"/>
+        </Grid>
+      </TabItem>
+    </TabControl>
 
-    </Grid>
+  </Grid>
 </Window>
