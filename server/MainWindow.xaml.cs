@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Net;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Net.Sockets;
 
 namespace server
 {
@@ -21,11 +11,17 @@ namespace server
     /// </summary>
     public partial class MainWindow : Window
     {
+        static Thread thread;
         class Server
         {
+            IPAddress iP;
+            int port;
+            TcpListener listener;
             public Server(string ip, string port)
             {
-
+                iP = IPAddress.Parse(ip);
+                this.port = Convert.ToInt32(port);
+                listener = new TcpListener(iP, this.port);
             }
             void UsersAdd()
             {
@@ -33,7 +29,30 @@ namespace server
             }
             public void Run()
             {
+                try
+                {
+                    listener.Start();
+                }
+                catch (Exception)
+                {
 
+                    throw;
+                }
+            }
+        }
+        class Listener
+        {
+            public Listener()
+            {
+                try
+                {
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
         }
         public MainWindow()
@@ -44,7 +63,7 @@ namespace server
         private void ServerStart(object sender, RoutedEventArgs e)
         {
             Server server = new Server(Ip.Text, Port.Text);
-            Thread thread = new Thread(server.Run);
+            thread = new Thread(server.Run);
             thread.Start();
         }
     }
